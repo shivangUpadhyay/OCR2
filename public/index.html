@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OCR Test</title>
+    <script src='https://unpkg.com/tesseract.js@v2.0.2/dist/tesseract.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <div id="app"><div>
+      <h1>Image Text Extraction</h1>
+      <button @click="extractText">Extract Text</button>
+      <div v-if="textExtracted">
+        <h2>Extracted Text:</h2>
+        <pre>{{ extractedText }}</pre>
+        <canvas ref="wordFrequencyChart"></canvas>
+      </div>
+  </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
